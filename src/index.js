@@ -12,14 +12,14 @@ class App extends Component {
 
     this.state = { videos: [] };
 
-    YTSearch({key: API_KEY, term: 'surfboards'}, (videos) => {
+    YTSearch({key: API_KEY, term: 'study with me'}, (videos) => {
       this.setState({ videos });
     });
   }
 
   render() {
     return (
-      <div className="search_bar">
+      <div>
         <SearchBar />
         <VideoDetail video={this.state.videos[0]} />
         <VideoList videos={this.state.videos} />
